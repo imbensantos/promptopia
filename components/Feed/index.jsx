@@ -28,6 +28,7 @@ const Feed = () => {
     return prompts.filter(
       (prompt) =>
         regex.test(prompt.creator.username) ||
+        regex.test(prompt.creator.email) ||
         regex.test(prompt.tag) ||
         regex.test(prompt.prompt)
     );
