@@ -7,6 +7,11 @@ export const metadata = {
   description: "Store & Share AI Prompts",
   icons: {
     icon: '/assets/images/logo.svg'
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1
   }
 };
 
@@ -14,7 +19,6 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body
-        className="sm:h-screen"
         suppressHydrationWarning={true} // this is to prevent browser extensions from causing a server/client mismatch
       >
         <Provider>
@@ -22,7 +26,7 @@ const RootLayout = ({ children }) => {
             <div className="gradient"></div>
           </div>
 
-          <main className="app sm:h-full">
+          <main className="app">
             <Nav />
             {children}
           </main>
