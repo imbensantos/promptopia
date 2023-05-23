@@ -14,6 +14,7 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body
+        className="sm:h-screen"
         suppressHydrationWarning={true} // this is to prevent browser extensions from causing a server/client mismatch
       >
         <Provider>
@@ -21,7 +22,7 @@ const RootLayout = ({ children }) => {
             <div className="gradient"></div>
           </div>
 
-          <main className="app">
+          <main className="app sm:h-full">
             <Nav />
             {children}
           </main>
